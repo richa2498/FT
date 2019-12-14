@@ -82,10 +82,10 @@ public class verification extends AppCompatActivity {
                         }
                     });
                     alertDialog.show();
-                      //Toast.makeText(verification.this, "verification", Toast.LENGTH_SHORT).show();
+                      Toast.makeText(verification.this, "verification", Toast.LENGTH_SHORT).show();
                         UserData.data.add(userData);
                         System.out.println(UserData.data.get(0).getName());
-                        //finish();
+
 
                 }else {
 
