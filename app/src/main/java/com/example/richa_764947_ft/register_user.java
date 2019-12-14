@@ -51,7 +51,7 @@ public class register_user extends AppCompatActivity {
                else {
                     Random ran = new Random();
                     int nxt = ran.nextInt(20);
-
+                   System.out.println("Just to check git");
                     userData = new UserData(nameM.getText().toString(), emailM.getText().toString(), phoneM.getText().toString(),UserData.imageIcons[nxt]);
                     Intent intent = new Intent(register_user.this,verification.class);
                     intent.putExtra("userData", userData);
