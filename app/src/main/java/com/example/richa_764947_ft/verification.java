@@ -2,6 +2,8 @@ package com.example.richa_764947_ft;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +44,7 @@ public class verification extends AppCompatActivity {
         setContentView(R.layout.activity_verification);
 
         userData = (UserData) getIntent().getSerializableExtra("userData");
-
+        cb = findViewById(R.id.checkBox);
         gridView = findViewById(R.id.imagesGrid);
         referesh = findViewById(R.id.refresh);
         verify = findViewById(R.id.verify);
@@ -65,13 +67,25 @@ public class verification extends AppCompatActivity {
             public void onClick(View view) {
                 System.out.println(lightsImages);
                 System.out.println(compareImage);
-                if (lightsImages.containsAll(compareImage))
+                if (lightsImages.containsAll(compareImage) && cb.isChecked() == true)
 
                 {
-                      Toast.makeText(verification.this, "verification", Toast.LENGTH_SHORT).show();
+                    AlertDialog alertDialog = new AlertDialog.Builder(
+                            verification.this).create();
+
+                    alertDialog.setTitle("Registerd");
+                    alertDialog.setMessage("You are Sucessfully Registered");
+                    alertDialog.setIcon(R.drawable.mycheck);
+                    alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    });
+                    alertDialog.show();
+                      //Toast.makeText(verification.this, "verification", Toast.LENGTH_SHORT).show();
                         UserData.data.add(userData);
                         System.out.println(UserData.data.get(0).getName());
-                        finish();
+
 
                 }else {
 

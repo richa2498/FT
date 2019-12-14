@@ -3,6 +3,7 @@ package com.example.richa_764947_ft;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,15 +38,21 @@ public class register_user extends AppCompatActivity {
                     //Toast.makeText(register_user.this,"all field must be filled",Toast.LENGTH_SHORT).show();
                    AlertDialog alertDialog = new AlertDialog.Builder(
                            register_user.this).create();
-              
+
 //                   // Setting Dialog Title
                   alertDialog.setTitle("LOOK");
 
                    // Setting Dialog Message
                    alertDialog.setMessage("Fields are Empty");
+                   alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                       public void onClick(DialogInterface dialog, int which) {
+
+                       }
+                   });
+
 
                    // Setting Icon to Dialog
-                   alertDialog.setIcon(R.drawable.checked);
+                   alertDialog.setIcon(R.drawable.cross);
                    alertDialog.show();
                }
                else {
