@@ -37,7 +37,7 @@ public class register_user extends AppCompatActivity {
                     //Toast.makeText(register_user.this,"all field must be filled",Toast.LENGTH_SHORT).show();
                    AlertDialog alertDialog = new AlertDialog.Builder(
                            register_user.this).create();
-                   System.out.println("git hub not working");
+              
 //                   // Setting Dialog Title
                   alertDialog.setTitle("LOOK");
 
