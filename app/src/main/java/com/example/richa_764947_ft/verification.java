@@ -78,14 +78,14 @@ public class verification extends AppCompatActivity {
                     alertDialog.setIcon(R.drawable.mycheck);
                     alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+
                         }
                     });
                     alertDialog.show();
                       //Toast.makeText(verification.this, "verification", Toast.LENGTH_SHORT).show();
                         UserData.data.add(userData);
                         System.out.println(UserData.data.get(0).getName());
-
+                        //finish();
 
                 }else {
 
